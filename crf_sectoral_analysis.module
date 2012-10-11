@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the crf_sectoral_analysis feature.
+ */
+
+include_once 'crf_sectoral_analysis.features.inc';
