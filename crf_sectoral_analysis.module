@@ -5,3 +5,45 @@
  */
 
 include_once 'crf_sectoral_analysis.features.inc';
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function crf_sectoral_analysis_form_sectoral_analysis_node_form_alter(&$form, &$form_state, $form_id) {
+  $node = $form['#node'];
+  $cluster_tid = $request_nid = NULL;
+
+  if (isset($_REQUEST['edit']['field_cluster']['und']) && isset($_REQUEST['edit']['field_crf_request']['und'])) {
+    $cluster_tid = $_REQUEST['edit']['field_cluster']['und'];
+    $request_nid = $_REQUEST['edit']['field_crf_request']['und'];
+  }
+  else if (isset($node->field_cluster['und'][0]['tid']) && isset($node->field_crf_request['und'][0]['target_id'])) {
+    $cluster_tid = $node->field_cluster['und'][0]['tid'];
+    $request_nid = $node->field_crf_request['und'][0]['target_id'];
+  }
+  
+  if ($cluster_tid && $request_nid) {
+    $indicator_data_batch_graphs_link = '';
+    $query = new EntityFieldQuery();
+    $result = $query
+      ->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'indicator_data_batch')
+      ->fieldCondition('field_cluster', 'tid', $cluster_tid)
+      ->fieldCondition('field_crf_request', 'target_id', $request_nid)
+      ->execute();
+    if (!empty($result['node'])) {
+      $nid = array_shift(array_keys($result['node']));    
+      $indicator_data_batch_graphs_link = l('Indicator Data Graphs', 'node/' . $nid . '/graphs');
+    }
+
+    if ($indicator_data_batch_graphs_link) {
+      $form['indicator_data_batch_graphs_link'] = array(
+        '#type' => 'item',
+        '#markup' => $indicator_data_batch_graphs_link,
+      );
+    }
+  }
+}
+
+
