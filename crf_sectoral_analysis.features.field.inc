@@ -110,7 +110,7 @@ function crf_sectoral_analysis_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '9',
+        'weight' => '4',
       ),
     ),
   );
