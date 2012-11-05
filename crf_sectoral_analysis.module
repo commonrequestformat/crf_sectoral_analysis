@@ -12,6 +12,8 @@ include_once 'crf_sectoral_analysis.features.inc';
  */
 function crf_sectoral_analysis_form_sectoral_analysis_node_form_alter(&$form, &$form_state, $form_id) {
   $node = $form['#node'];
+  
+  // Indicator Data Graphs link
   $cluster_tid = $request_nid = NULL;
 
   if (isset($_REQUEST['edit']['field_cluster']['und']) && isset($_REQUEST['edit']['field_crf_request']['und'])) {
