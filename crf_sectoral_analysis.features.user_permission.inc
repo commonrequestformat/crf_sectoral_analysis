@@ -15,7 +15,8 @@ function crf_sectoral_analysis_user_default_permissions() {
     'name' => 'delete any sectoral_analysis content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
+      1 => 'editor',
+      2 => 'manager',
     ),
     'module' => 'node',
   );
@@ -36,7 +37,8 @@ function crf_sectoral_analysis_user_default_permissions() {
     'name' => 'edit any sectoral_analysis content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'manager',
+      1 => 'editor',
+      2 => 'manager',
     ),
     'module' => 'node',
   );
