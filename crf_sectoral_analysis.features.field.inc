@@ -56,7 +56,7 @@ function crf_sectoral_analysis_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => 11,
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -181,7 +181,7 @@ function crf_sectoral_analysis_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 10,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
