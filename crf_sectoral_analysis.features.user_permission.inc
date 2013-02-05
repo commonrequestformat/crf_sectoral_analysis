@@ -14,9 +14,9 @@ function crf_sectoral_analysis_user_default_permissions() {
   $permissions['delete any sectoral_analysis content'] = array(
     'name' => 'delete any sectoral_analysis content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -25,9 +25,9 @@ function crf_sectoral_analysis_user_default_permissions() {
   $permissions['delete own sectoral_analysis content'] = array(
     'name' => 'delete own sectoral_analysis content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -36,9 +36,9 @@ function crf_sectoral_analysis_user_default_permissions() {
   $permissions['edit any sectoral_analysis content'] = array(
     'name' => 'edit any sectoral_analysis content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -47,9 +47,9 @@ function crf_sectoral_analysis_user_default_permissions() {
   $permissions['edit own sectoral_analysis content'] = array(
     'name' => 'edit own sectoral_analysis content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -58,9 +58,9 @@ function crf_sectoral_analysis_user_default_permissions() {
   $permissions['view any unpublished sectoral_analysis content'] = array(
     'name' => 'view any unpublished sectoral_analysis content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'view_unpublished',
   );
