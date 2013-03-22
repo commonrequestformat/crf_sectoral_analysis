@@ -10,14 +10,14 @@
 function crf_sectoral_analysis_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-sectoral_analysis-field_crf_request'.
-  $fields['node-sectoral_analysis-field_crf_request'] = array(
+  // Exported field: 'node-sectoral_analysis-field_request'.
+  $fields['node-sectoral_analysis-field_request'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_crf_request',
+      'field_name' => 'field_request',
       'field_permissions' => array(
         'type' => '0',
       ),
@@ -46,16 +46,12 @@ function crf_sectoral_analysis_field_default_fields() {
             ),
           ),
           'sort' => array(
-            'direction' => 'ASC',
-            'field' => 'field_asst_contact_email:email',
-            'property' => 'nid',
             'type' => 'none',
           ),
           'target_bundles' => array(
-            'crf_request' => 'crf_request',
+            'request' => 'request',
           ),
         ),
-        'handler_submit' => 'Change handler',
         'target_type' => 'node',
       ),
       'translatable' => '0',
@@ -76,7 +72,7 @@ function crf_sectoral_analysis_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '10',
+          'weight' => 13,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -86,7 +82,9 @@ function crf_sectoral_analysis_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_crf_request',
+      'entityconnect_unload_add' => '1',
+      'entityconnect_unload_edit' => '1',
+      'field_name' => 'field_request',
       'label' => 'Request',
       'required' => 1,
       'settings' => array(
@@ -97,13 +95,12 @@ function crf_sectoral_analysis_field_default_fields() {
         'active' => 1,
         'module' => 'options',
         'settings' => array(
-          'match_operator' => 'CONTAINS',
-          'path' => '',
-          'size' => '60',
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         ),
         'type' => 'options_select',
-        'weight' => '1',
+        'weight' => '3',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
